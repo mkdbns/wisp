@@ -4,7 +4,7 @@ import Head from 'next/head'
 export default () => (
   <div>
     <Head>
-      <title>Ant Boilerplate</title>
+      <title>Wisp</title>
       <meta charSet="utf-8" />
       <meta httpEquiv="content-type" content="text/html;charset=UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

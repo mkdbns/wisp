@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'antd';
 
-class MyCard extends React.Component {
+export default class Wisp extends React.Component {
   render() {
     return (
       <div>
@@ -29,5 +29,3 @@ class MyCard extends React.Component {
     );
   }
 }
-
-export default MyCard;
