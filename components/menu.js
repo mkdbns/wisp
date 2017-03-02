@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import {
   Menu,
   Icon
@@ -19,12 +20,20 @@ export default () => (
       theme="dark"
       defaultSelectedKeys={['1']}>
         <Menu.Item key="1">
-          <Icon type="user" />
-          <span className="menu-text">Menu 1</span>
+          <Link href="/">
+            <a>
+              <Icon type="user" />
+              <span className="menu-text">Menu 1</span>
+            </a>
+          </Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Icon type="video-camera" />
-          <span className="menu-text">Menu 2</span>
+          <Link href="/about">
+            <a>
+              <Icon type="video-camera" />
+              <span className="menu-text">Menu 2</span>
+            </a>
+          </Link>
         </Menu.Item>
         <Menu.Item key="3">
           <Icon type="upload" />
