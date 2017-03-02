@@ -30,7 +30,6 @@ export default class Grid extends React.Component {
     super();
   }
 
-
   render() {
     return (
       <div>

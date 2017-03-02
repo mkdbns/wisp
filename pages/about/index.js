@@ -4,6 +4,5 @@ import Wisp from '../../components/wisp';
 
 export default () => (
   <Page>
-    <Wisp/>
   </Page>
 )

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { Card } from 'antd';
+import { Card, Progress } from 'antd';
 import ReactPlayer from 'react-player'
 
 export default class Wisp extends React.Component {
@@ -11,6 +11,16 @@ export default class Wisp extends React.Component {
     this.state = {
       playing: false
     };
+  }
+
+  played = (value) => {
+    this.setState({
+      played: value.played * 100
+    })
+  }
+
+  progress = () => {
+    return this.state.played || 0;
   }
 
   play = () => {
@@ -26,6 +36,7 @@ export default class Wisp extends React.Component {
   }
 
   render() {
+
     return (
       <div>
         <style jsx global>{`
@@ -37,6 +48,10 @@ export default class Wisp extends React.Component {
           }
           .card-info p {
             color: #999;
+          }
+          .progress {
+            line-height:0px;
+            position: absolute;
           }
         `}</style>
 
@@ -52,6 +67,7 @@ export default class Wisp extends React.Component {
             <div className="card-image">
               <img width="100%" src={this.props.data.image}/>
             </div>
+            <Progress className="progress" percent={this.progress()} strokeWidth={2} showInfo={false} />
             <div className="card-info">
               <h3>{this.props.data.message}</h3>
               <p>{this.props.data.from}</p>
@@ -62,6 +78,8 @@ export default class Wisp extends React.Component {
           url={this.props.data.audio}
           hidden={true}
           playing={this.state.playing}
+          onProgress={this.played}
+          progressFrequency={100}
         />
 
       </div>
