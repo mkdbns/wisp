@@ -1,7 +1,7 @@
 {
-  "name": "antman",
+  "name": "wisp",
   "version": "1.0.0",
-  "description": "Next.js Boilerplate with Ant",
+  "description": "Wisp Experimentation",
   "repository": {},
   "license": "MIT",
   "dependencies": {
@@ -10,7 +10,8 @@
     "next": "2.0.0-beta.32",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-player": "^0.14.3"
+    "react-player": "^0.14.3",
+    "react-tap-event-plugin": "^2.0.1"
   },
   "scripts": {
     "dev": "next",

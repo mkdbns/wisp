@@ -23,15 +23,34 @@ export default class Wisp extends React.Component {
     return this.state.played || 0;
   }
 
-  play = () => {
-    if(!this.state.playing){
-      this.setState({
-        playing: true
-      });
+  touch = () => {
+    console.log('touch');
+    if(this.state.playing) {
+      this.stop();
+    } else {
+      this.play();
     }
   }
 
+  mouseover = () => {
+    console.log('mouseover');
+    this.play();
+  }
+
+  mouseout = () => {
+    console.log('mouseout');
+    this.stop();
+  }
+
+  play = () => {
+      console.log('play');
+    this.setState({
+      playing: true
+    });
+  }
+
   stop = () => {
+      console.log('stop');
     this.setState({
       playing: false
     });
@@ -64,11 +83,9 @@ export default class Wisp extends React.Component {
           bodyStyle={{
             padding: 0
           }}
-          onMouseOver={this.play}
-          onMouseOut={this.stop}
-          onClick={_.noop}
-          onTouchStart={this.play}
-          onTouchEnd={this.stop}>
+          onMouseOver={this.mouseover}
+          onMouseOut={this.mouseout}
+          onTouchTap={this.touch}>
             <div className="card-image">
               <img width="100%" src={this.props.data.image}/>
             </div>

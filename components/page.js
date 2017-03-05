@@ -1,7 +1,10 @@
 import React from 'react';
+import TapEvent from 'react-tap-event-plugin';
 import { Layout } from 'antd';
 import Head from './head';
 import Menu from './menu';
+
+TapEvent();
 
 const {
   Header,
@@ -69,14 +72,14 @@ export default class extends React.Component {
         `}</style>
         <Head/>
         <Layout className="full">
-          <Sider
+          {/* <Sider
             trigger={null}
             collapsible
             collapsed={this.state.collapsed}
             onMouseEnter={this.open}>
               <div className="logo" />
               <Menu/>
-          </Sider>
+          </Sider> */}
           <Layout onMouseEnter={this.close}>
             <Header className="header"/>
             <Content className="content">

@@ -7,7 +7,9 @@ import Wisp from './wisp';
 
 const wisps = [
   {
+    //
     // image: 'https://placeimg.com/225/400/any/grayscale?x=1',
+    // 
     image: '/static/img/card-01.png',
     audio: 'http://www2.cellsea.com/content/ringtone/2011/RT4dab183e9068b.mp3',
     message: 'Yeah!',
@@ -50,10 +52,10 @@ export default class Grid extends React.Component {
           }
         `}</style>
         <Row type="flex" justify="space-around">
-          <Col className="wisp" sm={6} md={6} lg={4}><Wisp data={wisps[4]}/></Col>
-          <Col className="wisp" sm={6} md={6} lg={4}><Wisp data={wisps[1]}/></Col>
-          <Col className="wisp" sm={6} md={6} lg={4}><Wisp data={wisps[2]}/></Col>
-          <Col className="wisp" sm={6} md={6} lg={4}><Wisp data={wisps[3]}/></Col>
+          <Col className="wisp" sm={8} md={6} lg={4}><Wisp data={wisps[4]}/></Col>
+          <Col className="wisp" sm={8} md={6} lg={4}><Wisp data={wisps[1]}/></Col>
+          <Col className="wisp" sm={8} md={6} lg={4}><Wisp data={wisps[2]}/></Col>
+          <Col className="wisp" sm={8} md={6} lg={4}><Wisp data={wisps[3]}/></Col>
         </Row>
       </div>
     );
