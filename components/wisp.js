@@ -24,9 +24,11 @@ export default class Wisp extends React.Component {
   }
 
   play = () => {
-    this.setState({
-      playing: true
-    });
+    if(!this.state.playing){
+      this.setState({
+        playing: true
+      });
+    }
   }
 
   stop = () => {
@@ -57,13 +59,16 @@ export default class Wisp extends React.Component {
 
         <Card
           style={{
-            maxWidth: 300
+            maxWidth: 225,
           }}
           bodyStyle={{
             padding: 0
           }}
           onMouseOver={this.play}
-          onMouseOut={this.stop}>
+          onMouseOut={this.stop}
+          onClick={_.noop}
+          onTouchStart={this.play}
+          onTouchEnd={this.stop}>
             <div className="card-image">
               <img width="100%" src={this.props.data.image}/>
             </div>

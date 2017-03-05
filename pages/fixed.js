@@ -1,9 +1,9 @@
 import React from 'react';
-import Page from '../components/page';
+import Fixed from '../components/fixed';
 import Grid from '../components/grid';
 
 export default () => (
-  <Page>
+  <Fixed>
     <Grid/>
-  </Page>
+  </Fixed>
 )
